@@ -42,10 +42,10 @@ public class Book {
 
     private void amendAuthor(String author) {
         if (author == null || author.isEmpty()) {
-            throw new IllegalArgumentException("ㅗ");
+            throw new IllegalArgumentException("작가 이름에 Null 또는 Empty를 넣을 수 없습니다");
         }
         if (author.length() > AUTHOR_LENGTH_LIMIT) {
-            throw new IllegalArgumentException("ㅗㅗ");
+            throw new IllegalArgumentException("작가 이름은 64글자를 넘을 수 없습니다");
         }
         this.author = author;
     }
