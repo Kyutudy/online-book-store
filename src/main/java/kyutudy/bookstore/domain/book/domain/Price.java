@@ -1,4 +1,4 @@
-package kyutudy.bookstore.domain.book;
+package kyutudy.bookstore.domain.book.domain;
 
 import javax.persistence.Embeddable;
 

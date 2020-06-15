@@ -1,4 +1,4 @@
-package kyutudy.bookstore.domain.book;
+package kyutudy.bookstore.domain.book.domain;
 
 
 import javax.persistence.Embedded;
@@ -20,11 +20,16 @@ public class Book {
     @Embedded
     private Price price;
 
-
     private Book() {
     }
 
     public Book(String name, String author, Price price) {
+        amendName(name);
+        amendAuthor(author);
+        this.price = requireNonNull(price);
+    }
+
+    public void edit(String name, String author, Price price) {
         amendName(name);
         amendAuthor(author);
         this.price = requireNonNull(price);
